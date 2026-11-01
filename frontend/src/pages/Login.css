@@ -1,0 +1,53 @@
+.lg-page { min-height: 100vh; display: grid; grid-template-columns: 1.05fr 1fr; font-family: 'Segoe UI', system-ui, sans-serif; background: #fff; color: #0f172a; }
+.lg-side { position: relative; overflow: hidden; color: #fff; padding: 48px; display: flex; flex-direction: column; justify-content: space-between;
+  background: radial-gradient(circle at 15% 15%, #6366f1 0, transparent 45%), radial-gradient(circle at 85% 85%, #a855f7 0, transparent 45%), linear-gradient(135deg, #1e1b4b, #312e81 60%, #4338ca); }
+.lg-brand { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 800; color: #fff; text-decoration: none; }
+.lg-logo { width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,.18); display: flex; align-items: center; justify-content: center; }
+.lg-side h2 { font-size: clamp(30px, 3vw, 42px); line-height: 1.2; margin: 0 0 14px; }
+.lg-side p { color: #c7d2fe; max-width: 420px; font-size: 16px; }
+.lg-points { list-style: none; margin: 26px 0 0; padding: 0; }
+.lg-points li { padding: 7px 0; color: #e0e7ff; }
+.lg-points li::before { content: '✓'; color: #4ade80; font-weight: 800; margin-right: 10px; }
+.lg-foot { font-size: 13px; color: #a5b4fc; }
+
+.lg-main { display: flex; align-items: center; justify-content: center; padding: 40px 24px; background: #f8fafc; }
+.lg-box { width: 100%; max-width: 420px; }
+.lg-back { display: inline-block; color: #64748b; font-size: 14px; text-decoration: none; margin-bottom: 22px; }
+.lg-back:hover { color: #4f46e5; }
+.lg-box h1 { font-size: 30px; margin: 0 0 6px; color: #1e1b4b; }
+.lg-sub { color: #64748b; font-size: 14px; margin: 0 0 22px; }
+.lg-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; background: #e2e8f0; padding: 5px; border-radius: 14px; margin-bottom: 24px; }
+.lg-tabs button { border: none; background: transparent; padding: 10px 6px; border-radius: 10px; font-weight: 700; font-size: 13px; color: #475569; cursor: pointer; transition: .2s; font-family: inherit; }
+.lg-tabs button.on { background: #fff; color: #4f46e5; box-shadow: 0 2px 8px rgba(15,23,42,.12); }
+.lg-field { margin-bottom: 16px; }
+.lg-field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #334155; }
+.lg-input { position: relative; }
+.lg-field input { width: 100%; padding: 13px 14px; border: 1.5px solid #e2e8f0; border-radius: 12px; font-size: 15px; outline: none; background: #fff; color: #0f172a; transition: .2s; font-family: inherit; }
+.lg-field input:focus { border-color: #6366f1; box-shadow: 0 0 0 4px rgba(99,102,241,.15); }
+.lg-eye { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer; font-size: 18px; }
+.lg-error { background: #fee2e2; color: #b91c1c; padding: 10px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 14px; }
+.lg-submit { width: 100%; padding: 14px; border: none; border-radius: 12px; background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; transition: .2s; font-family: inherit; }
+.lg-submit:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(79,70,229,.35); }
+.lg-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.lg-demo { margin-top: 20px; padding: 14px; border: 1.5px dashed #c7d2fe; border-radius: 12px; background: #eef2ff; font-size: 13px; color: #475569; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.lg-demo button { border: none; background: #4f46e5; color: #fff; padding: 8px 14px; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: inherit; font-size: 13px; white-space: nowrap; }
+
+@media (max-width: 860px) {
+  .lg-page { grid-template-columns: 1fr; }
+  .lg-side { display: none; }
+}
+/* Admin secure login */
+.ad-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px;
+  background: radial-gradient(circle at 20% 20%, #1e3a8a 0, transparent 40%), radial-gradient(circle at 80% 80%, #4c1d95 0, transparent 40%), #020617;
+  font-family: 'Segoe UI', system-ui, sans-serif; }
+.ad-card { width: 100%; max-width: 420px; background: rgba(15,23,42,.88); border: 1px solid #1e293b; border-radius: 20px;
+  padding: 36px 32px; color: #e2e8f0; box-shadow: 0 30px 70px rgba(0,0,0,.5); }
+.ad-shield { width: 64px; height: 64px; border-radius: 18px; margin: 0 auto 16px; background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  display: flex; align-items: center; justify-content: center; font-size: 30px; }
+.ad-card h1 { text-align: center; font-size: 24px; margin: 0 0 4px; color: #fff; }
+.ad-card .lg-sub { text-align: center; color: #94a3b8; }
+.ad-card .lg-field label { color: #cbd5e1; }
+.ad-card .lg-field input { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+.ad-warn { margin: 18px 0 0; font-size: 12px; color: #64748b; text-align: center; }
+.lg-forgot { display: block; text-align: right; font-size: 13px; margin: -6px 0 14px; color: #4f46e5; text-decoration: none; font-weight: 600; }
+.lg-forgot:disabled { color: #94a3b8; }
